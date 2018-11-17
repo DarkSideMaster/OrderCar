@@ -12534,11 +12534,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Lessons_for_C#\\source\\repos\\Test_Uklon_WebApplication\\Test_Uklon_WebApplication\\Test_Uklon_WebApplication.csproj",
+      "projectUniqueName": "D:\\GitHub\\OrderCar\\Test_Uklon_WebApplication\\Test_Uklon_WebApplication.csproj",
       "projectName": "Test_Uklon_WebApplication",
-      "projectPath": "D:\\Lessons_for_C#\\source\\repos\\Test_Uklon_WebApplication\\Test_Uklon_WebApplication\\Test_Uklon_WebApplication.csproj",
+      "projectPath": "D:\\GitHub\\OrderCar\\Test_Uklon_WebApplication\\Test_Uklon_WebApplication.csproj",
       "packagesPath": "C:\\Users\\darkp\\.nuget\\packages\\",
-      "outputPath": "D:\\Lessons_for_C#\\source\\repos\\Test_Uklon_WebApplication\\Test_Uklon_WebApplication\\obj\\",
+      "outputPath": "D:\\GitHub\\OrderCar\\Test_Uklon_WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12597,4 +12597,4 @@
       }
     }
   }
-} 
+}

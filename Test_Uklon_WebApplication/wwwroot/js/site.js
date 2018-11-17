@@ -3,20 +3,16 @@
 
 // Write your JavaScript code.
 
-
-var request = new XMLHttpRequest();
-
 function CancelChangeStatus(orderId) {
+    this.request = new XMLHttpRequest();
+    this.request.open("POST", "https://localhost:44389/Orders/Cancel");
+    this.request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-    request.open("POST", "https://localhost:44389/Orders/Cancel");
-    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-    request.onreadystatechange = function() {
+    this.request.onreadystatechange = function () {
         if (request.readyState == 4 && request.status == 200)
             document.getElementById(orderId).innerHTML = "YES";
+            document.getElementById(orderId).style.color = "red";
     }
-
-    request.send(orderId);
-} 
-
+    request.send("Id=" + orderId); 
+}
 
