@@ -14,3 +14,4 @@ namespace Test_Uklon_WebApplication.Interfaces
         T GetEntity(int id);
     }
 }
+ 
