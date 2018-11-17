@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Test_Uklon_WebApplication.Models.Order>
+
+
+@{
+    ViewData["Title"] = "AllOrdersView";
+}
+
+<h2 class="mainpagecenter">Order list</h2>
+<br />
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>OrderId</th>
+                <th>AdressFrom</th>
+                <th>AdressTo</th>
+                <th>Phone</th>
+                <th>Price</th>
+                <th>Canceled</th>
+                <th colspan="2" class="mainpagecenter">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var userinfo in Model)
+            {
+                <tr>
+                    <td>@userinfo.Id</td>
+                    <td>@userinfo.AddressFrom</td>
+                    <td>@userinfo.AddressTo</td>
+                    <td>@userinfo.Phone</td>
+                    <td>@userinfo.Price</td>
+                    <td>
+                        @if (@userinfo.Canceled)
+                        {
+                            <span style="color: red"><b>YES</b></span>
+                        }
+                        else
+                        {
+                            <span style="color: green" id="@userinfo.Id"><b>NO</b></span>
+                        }
+                    </td>
+                    <td>
+                        <a asp-controller="Orders" asp-action="EditOrdersView" asp-route-id="@userinfo.Id">
+                            <input type='button' class="btn btn-primary" value='Edit' title="Edit current order" />
+                        </a>
+                    </td>
+                    <td>
+                        <input type="button" class="btn btn-danger" title="Cancel current order" value="Cancel" onclick="CancelChangeStatus(@userinfo.Id)" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-controller="Orders" asp-action="CreateOrdersView">
+        <input type='button' class="btn btn-success" value='Add new order' title="Add new order" />
+    </a>
+</div>
+

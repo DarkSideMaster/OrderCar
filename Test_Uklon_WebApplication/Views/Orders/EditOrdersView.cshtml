@@ -1,0 +1,52 @@
+﻿@model Test_Uklon_WebApplication.Models.Order;
+
+
+@{
+    ViewData["Title"] = "EditOrdersView";
+}
+
+<h2>Order edit</h2>
+<br />
+<form asp-action="EditOrdersView" asp-controller="Orders" asp-route-id="@Model.Id">
+    <div class="container-fluid">
+        <table class="table table-bordered tablecreate">
+            <tr>
+                <td>
+                    <label asp-for="AddressFrom" class="control-label">AdressFrom</label>
+                </td>
+                <td>
+                    <input type="text" asp-for="AddressFrom" class="form-control" />
+                    <span asp-validation-for="AddressFrom" class="validationcolor"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="AddressTo" class="control-label">AdressTo</label>
+                </td>
+                <td>
+                    <input type="text" asp-for="AddressTo" class="form-control" />
+                    <span asp-validation-for="AddressTo" class="validationcolor"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Phone" class="control-label">Phone</label>
+                </td>
+                <td>
+                    <input type="number" asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="validationcolor"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Price" class="control-label">Price</label>
+                </td>
+                <td>
+                    <input type="number" asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="validationcolor"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <input type="submit" value="Save" class="btn btn-success" />
+</form>
