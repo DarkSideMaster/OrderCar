@@ -27,3 +27,4 @@ namespace Test_Uklon_WebApplication.Models
         public bool Canceled { get; set; }
     }
 }
+ 
