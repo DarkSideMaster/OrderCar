@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Test_Uklon_WebApplication.Models;
 
-namespace Test_Uklon_WebApplication.Database
+namespace Test_Uklon_WebApplication.Extensions
 {
     public class DatabaseExtensions
     {

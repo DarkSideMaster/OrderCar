@@ -51,7 +51,7 @@ namespace Test_Uklon_WebApplication
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Orders}/{action=AllOrdersView}/{id?}");
+                    template: "{controller=Order}/{action=AllOrdersView}/{id?}");
             });
         }
     }

@@ -41,8 +41,11 @@ body {
 }
 
 .validationcolor {
-
     color: red;
+}
+
+.validationcolorg {
+    color: green;
 }
 
 .mainpagecenter{

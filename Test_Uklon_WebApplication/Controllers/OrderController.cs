@@ -11,11 +11,11 @@ using Test_Uklon_WebApplication.Repositories;
 
 namespace Test_Uklon_WebApplication.Controllers
 {
-    public class OrdersController : Controller
+    public class OrderController : Controller
     {
         private readonly OrderRepository _orderRepository;
 
-        public OrdersController(UklonSiteContext context)
+        public OrderController(UklonSiteContext context)
         {
             _orderRepository = new OrderRepository(context);
         }
@@ -26,11 +26,10 @@ namespace Test_Uklon_WebApplication.Controllers
         }
 
         [HttpGet]
-        public IActionResult CreateOrdersView()
+        public IActionResult CreateOrderView()
         {
             return View();
         }
-
 
         [HttpPost]
         public IActionResult Create(Order order)
@@ -52,9 +51,8 @@ namespace Test_Uklon_WebApplication.Controllers
             }
         }
 
-
         [HttpGet]
-        public IActionResult EditOrdersView(int id)
+        public IActionResult EditOrderView(int id)
         {
             if (!ModelState.IsValid)
             {
@@ -64,9 +62,8 @@ namespace Test_Uklon_WebApplication.Controllers
             return View(_orderRepository.Edit(id));
         }
 
-
         [HttpPost]
-        public IActionResult EditOrdersView(Order order)
+        public IActionResult EditOrderView(Order order)
         {
             if (!ModelState.IsValid)
             {
@@ -100,7 +97,6 @@ namespace Test_Uklon_WebApplication.Controllers
 
             return Ok();
         }
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

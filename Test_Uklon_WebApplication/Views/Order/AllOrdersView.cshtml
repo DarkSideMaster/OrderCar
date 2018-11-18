@@ -32,26 +32,26 @@
                     <td>
                         @if (@userinfo.Canceled)
                         {
-                        <span style="color: red" id="@userinfo.Id"><b>YES</b></span>
+                        <span class="validationcolor" id="@userinfo.Id"><b>YES</b></span>
                         }
                         else
                         {
-                            <span style="color: green" id="@userinfo.Id"><b>NO</b></span>
+                            <span class="validationcolorg" id="@userinfo.Id"><b>NO</b></span>
                         }
                     </td>
                     <td>
-                        <a asp-controller="Orders" asp-action="EditOrdersView" asp-route-id="@userinfo.Id">
+                        <a asp-controller="Order" asp-action="EditOrderView" asp-route-id="@userinfo.Id">
                             <input type='button' class="btn btn-primary" value='Edit' title="Edit current order" />
                         </a>
                     </td>
                     <td>
-                        <input type="button" class="btn btn-danger" title="Cancel current order" value="Cancel" onclick="CancelChangeStatus(@userinfo.Id)" />
+                        <input type="button" class="btn btn-danger" title="Cancel current order" value="Cancel" onclick="CancelOrder(@userinfo.Id)" />
                     </td>
                 </tr>
             }
         </tbody>
     </table>
-    <a asp-controller="Orders" asp-action="CreateOrdersView">
+    <a asp-controller="Order" asp-action="CreateOrderView">
         <input type='button' class="btn btn-success" value='Add new order' title="Add new order" />
     </a>
 </div>

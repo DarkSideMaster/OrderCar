@@ -2,12 +2,12 @@
 
 
 @{
-    ViewData["Title"] = "EditOrdersView";
+    ViewData["Title"] = "EditOrderView";
 }
 
 <h2>Order edit</h2>
 <br />
-<form asp-action="EditOrdersView" asp-controller="Orders" asp-route-id="@Model.Id">
+<form asp-action="EditOrderView" asp-controller="Order" asp-route-id="@Model.Id">
     <div class="container-fluid">
         <table class="table table-bordered tablecreate">
             <tr>
