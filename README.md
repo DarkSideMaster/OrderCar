@@ -1,3 +1,3 @@
 # OrderCar
 
-Using this application you can simulate order from taxi
+Using this application(ASP.NET MVC Core 2.1) you can simulate a taxi order.
